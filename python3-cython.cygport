@@ -1,0 +1,20 @@
+ORIG_PN="Cython"
+inherit python3-distutils
+
+NAME="python3-cython"
+VERSION=0.17.1
+RELEASE=1
+CATEGORY="Python"
+SUMMARY="C extension language for Py3K"
+DESCRIPTION="Cython is a language that makes writing C extensions for the
+Python language as easy as Python itself. It is based on the well-known Pyrex,
+but supports more cutting edge functionality and optimizations."
+HOMEPAGE="http://www.cython.org/"
+
+src_install() {
+	cd ${B}
+	python3_distutils_install
+
+	mv ${D}/usr/bin/cygdb{,3}
+	mv ${D}/usr/bin/cython{,3}
+}
