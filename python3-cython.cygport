@@ -2,7 +2,7 @@ ORIG_PN="Cython"
 inherit python3-distutils
 
 NAME="python3-cython"
-VERSION=0.19.1
+VERSION=0.19.2
 RELEASE=1
 CATEGORY="Python"
 SUMMARY="C extension language for Py3K"
